@@ -1,20 +1,19 @@
-/* Sticky Navigation */
+/* Header Styling */
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000; 
-    background-color : #F0F0F0 ;
-    padding: 10px;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #F0F0F0;
+    padding: 10px;
+    z-index: 1000; /* To keep the header above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional for a slight shadow */
 }
 
-/* Main content styling */
+/* Main Content (article) Styling */
 main {
+    margin-top: 60px; /* To create space for the fixed header */
     display: flex;
     justify-content: space-between;
-    margin-top: 60px; 
-    z-index: 1; 
 }
 
 article {
@@ -22,24 +21,45 @@ article {
     margin: 20px auto;
     background-color: #E0E0E0;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
-/* Sidebar styling */
+/* Sidebar (aside) Styling */
 aside {
     width: 30%;
+    margin: 20px auto;
     background-color: #D0D0D0;
     padding: 15px;
-    margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
-/* Footer styling */
+/* Footer Styling */
 footer {
-    position: relative;
-    z-index: 10; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #C0C0C0;
     padding: 10px;
     text-align: center;
-    width: 100%;
+    z-index: 100; /* Ensures the footer stays above content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional for a slight shadow */
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #F0F0F0;
+    padding: 10px;
+    z-index: 1000; /* Ensures the sticky navigation bar stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
+header, footer {
+    z-index: 1000; /* Header and Footer have a higher stacking order */
+}
+
+main, aside {
+    z-index: 1; /* Main content and sidebar have a lower stacking order */
 }
