@@ -1,18 +1,20 @@
-/* Header styling */
+/* Sticky Navigation */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
+    z-index: 1000; /
     background-color: #F0F0F0;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Main content styling */
 main {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     margin-top: 60px; 
+    z-index: 1; 
 }
 
 article {
@@ -20,24 +22,24 @@ article {
     margin: 20px auto;
     background-color: #E0E0E0;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-/* Sidebar (aside) styling */
+/* Sidebar styling */
 aside {
     width: 30%;
     background-color: #D0D0D0;
     padding: 15px;
     margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer styling */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+    z-index: 10; 
     background-color: #C0C0C0;
     padding: 10px;
-    text-align: center; 
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    width: 100%;
 }
